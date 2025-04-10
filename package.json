@@ -10,9 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@bugsnag/cuid": "^3.2.1",
     "@nuxt/scripts": "0.11.5",
+    "kysely": "^0.27.6",
     "nuxt": "^3.16.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "kysely-ctl": "^0.12.1"
   }
 }
