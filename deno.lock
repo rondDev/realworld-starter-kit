@@ -1,7 +1,10 @@
 {
   "version": "4",
   "specifiers": {
+    "npm:@bugsnag/cuid@^3.2.1": "3.2.1",
     "npm:@nuxt/scripts@0.11.5": "0.11.5_@unhead+vue@2.0.3__vue@3.5.13_nuxt@3.16.2__vue@3.5.13__vue-router@4.5.0___vue@3.5.13__jiti@2.4.2_vue@3.5.13",
+    "npm:kysely-ctl@~0.12.1": "0.12.1_kysely@0.27.6",
+    "npm:kysely@~0.27.6": "0.27.6",
     "npm:nuxt@^3.16.2": "3.16.2_vue@3.5.13_vue-router@4.5.0__vue@3.5.13_jiti@2.4.2",
     "npm:vue-router@^4.5.0": "4.5.0_vue@3.5.13",
     "npm:vue@^3.5.13": "3.5.13"
@@ -206,6 +209,9 @@
         "@babel/helper-validator-identifier"
       ]
     },
+    "@bugsnag/cuid@3.2.1": {
+      "integrity": "sha512-zpvN8xQ5rdRWakMd/BcVkdn2F8HKlDSbM3l7duueK590WmI1T0ObTLc1V/1e55r14WNjPd5AJTYX4yPEAFVi+Q=="
+    },
     "@cloudflare/kv-asset-handler@0.4.0": {
       "integrity": "sha512-+tv3z+SPp+gqTIcImN9o0hqE9xyfQjI1XD9pL6NuKjua9B1y7mNYv0S9cP+QEbA4ppVgGZEmKOvHX5G5Ei1CVA==",
       "dependencies": [
@@ -323,7 +329,7 @@
     "@isaacs/fs-minipass@4.0.1": {
       "integrity": "sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w==",
       "dependencies": [
-        "minipass"
+        "minipass@7.1.2"
       ]
     },
     "@jridgewell/gen-mapping@0.3.8": {
@@ -375,7 +381,7 @@
         "node-fetch",
         "nopt",
         "semver@7.7.1",
-        "tar"
+        "tar@7.4.3"
       ]
     },
     "@napi-rs/wasm-runtime@0.2.8": {
@@ -415,19 +421,19 @@
     "@nuxt/cli@3.24.1": {
       "integrity": "sha512-dWoB3gZj2H04x58QWNWpshQUxjsf0TB6Ppy7YKswS5hGtQkOlQ5k85f133+Bg50TJqzNuZ3OUMRduftppdJjrg==",
       "dependencies": [
-        "c12",
+        "c12@3.0.3_magicast@0.3.5",
         "chokidar",
         "citty",
         "clipboardy",
         "consola",
         "defu",
         "fuse.js",
-        "giget",
+        "giget@2.0.0",
         "h3",
         "httpxy",
         "jiti",
         "listhen",
-        "nypm",
+        "nypm@0.6.0",
         "ofetch",
         "ohash",
         "pathe@2.0.3",
@@ -487,7 +493,7 @@
         "launch-editor",
         "local-pkg",
         "magicast",
-        "nypm",
+        "nypm@0.6.0",
         "ohash",
         "pathe@2.0.3",
         "perfect-debounce",
@@ -507,7 +513,7 @@
     "@nuxt/kit@3.16.2": {
       "integrity": "sha512-K1SAUo2vweTfudKZzjKsZ5YJoxPLTspR5qz5+G61xtZreLpsdpDYfBseqsIAl5VFLJuszeRpWQ01jP9LfQ6Ksw==",
       "dependencies": [
-        "c12",
+        "c12@3.0.3_magicast@0.3.5",
         "consola",
         "defu",
         "destr",
@@ -534,7 +540,7 @@
     "@nuxt/kit@3.16.2_magicast@0.3.5": {
       "integrity": "sha512-K1SAUo2vweTfudKZzjKsZ5YJoxPLTspR5qz5+G61xtZreLpsdpDYfBseqsIAl5VFLJuszeRpWQ01jP9LfQ6Ksw==",
       "dependencies": [
-        "c12",
+        "c12@3.0.3_magicast@0.3.5",
         "consola",
         "defu",
         "destr",
@@ -1319,6 +1325,23 @@
         "run-applescript"
       ]
     },
+    "c12@2.0.4": {
+      "integrity": "sha512-3DbbhnFt0fKJHxU4tEUPmD1ahWE4PWPMomqfYsTJdrhpmEnRKJi3qSC4rO5U6E6zN1+pjBY7+z8fUmNRMaVKLw==",
+      "dependencies": [
+        "chokidar",
+        "confbox@0.1.8",
+        "defu",
+        "dotenv",
+        "giget@1.2.5",
+        "jiti",
+        "mlly",
+        "ohash",
+        "pathe@2.0.3",
+        "perfect-debounce",
+        "pkg-types@1.3.1",
+        "rc9"
+      ]
+    },
     "c12@3.0.3_magicast@0.3.5": {
       "integrity": "sha512-uC3MacKBb0Z15o5QWCHvHWj5Zv34pGQj9P+iXKSpTuSGFS0KKhUWf4t9AJ+gWjYOdmWCPEGpEzm8sS0iqbpo1w==",
       "dependencies": [
@@ -1327,7 +1350,7 @@
         "defu",
         "dotenv",
         "exsolve",
-        "giget",
+        "giget@2.0.0",
         "jiti",
         "magicast",
         "ohash",
@@ -1357,6 +1380,9 @@
       "dependencies": [
         "readdirp"
       ]
+    },
+    "chownr@2.0.0": {
+      "integrity": "sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ=="
     },
     "chownr@3.0.0": {
       "integrity": "sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g=="
@@ -1843,6 +1869,12 @@
     "fresh@0.5.2": {
       "integrity": "sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q=="
     },
+    "fs-minipass@2.1.0": {
+      "integrity": "sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==",
+      "dependencies": [
+        "minipass@3.3.6"
+      ]
+    },
     "fsevents@2.3.3": {
       "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="
     },
@@ -1864,6 +1896,18 @@
     "get-stream@8.0.1": {
       "integrity": "sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA=="
     },
+    "giget@1.2.5": {
+      "integrity": "sha512-r1ekGw/Bgpi3HLV3h1MRBIlSAdHoIMklpaQ3OQLFcRw9PwAj2rqigvIbg+dBUI51OxVI2jsEtDywDBjSiuf7Ug==",
+      "dependencies": [
+        "citty",
+        "consola",
+        "defu",
+        "node-fetch-native",
+        "nypm@0.5.4",
+        "pathe@2.0.3",
+        "tar@6.2.1"
+      ]
+    },
     "giget@2.0.0": {
       "integrity": "sha512-L5bGsVkxJbJgdnwyuheIunkGatUF/zssUoxxjACCseZYAVbaqdh9Tsmmlkl8vYan09H7sbvKt4pS8GqKLBrEzA==",
       "dependencies": [
@@ -1871,7 +1915,7 @@
         "consola",
         "defu",
         "node-fetch-native",
-        "nypm",
+        "nypm@0.6.0",
         "pathe@2.0.3"
       ]
     },
@@ -1900,7 +1944,7 @@
         "foreground-child",
         "jackspeak",
         "minimatch@9.0.5",
-        "minipass",
+        "minipass@7.1.2",
         "package-json-from-dist",
         "path-scurry"
       ]
@@ -2153,6 +2197,24 @@
     "knitwork@1.2.0": {
       "integrity": "sha512-xYSH7AvuQ6nXkq42x0v5S8/Iry+cfulBz/DJQzhIyESdLD7425jXsPy4vn5cCXU+HhRN2kVw51Vd1K6/By4BQg=="
     },
+    "kysely-ctl@0.12.1_kysely@0.27.6": {
+      "integrity": "sha512-WfXt/+lB3Vqhdy7osq1ghe2ZMUtIj/Qizu+H5ewdCWLLB4CYJcGt//yBvInlOVw44wvjvHHnXx3L+44t3OXJNg==",
+      "dependencies": [
+        "c12@2.0.4",
+        "citty",
+        "consola",
+        "jiti",
+        "kysely",
+        "nypm@0.5.4",
+        "ofetch",
+        "pathe@2.0.3",
+        "pkg-types@1.3.1",
+        "std-env"
+      ]
+    },
+    "kysely@0.27.6": {
+      "integrity": "sha512-FIyV/64EkKhJmjgC0g2hygpBv5RNWVPyNCqSAD7eTCv6eFWNIi4PN1UvdSJGicN/o35bnevgis4Y0UDC0qi8jQ=="
+    },
     "launch-editor@2.10.0": {
       "integrity": "sha512-D7dBRJo/qcGX9xlvt/6wUYzQxjh5G1RvZPgPv8vi4KRU99DVQL/oW7tnVOCCTm2HGeo3C5HvGE5Yrh6UBoZ0vA==",
       "dependencies": [
@@ -2287,17 +2349,36 @@
         "brace-expansion"
       ]
     },
+    "minipass@3.3.6": {
+      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
+      "dependencies": [
+        "yallist@4.0.0"
+      ]
+    },
+    "minipass@5.0.0": {
+      "integrity": "sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ=="
+    },
     "minipass@7.1.2": {
       "integrity": "sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw=="
+    },
+    "minizlib@2.1.2": {
+      "integrity": "sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==",
+      "dependencies": [
+        "minipass@3.3.6",
+        "yallist@4.0.0"
+      ]
     },
     "minizlib@3.0.2": {
       "integrity": "sha512-oG62iEk+CYt5Xj2YqI5Xi9xWUeZhDI8jjQmC5oThVH5JGCTgIjr7ciJDzC7MBzYd//WvR1OTmP5Q38Q8ShQtVA==",
       "dependencies": [
-        "minipass"
+        "minipass@7.1.2"
       ]
     },
     "mitt@3.0.1": {
       "integrity": "sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw=="
+    },
+    "mkdirp@1.0.4": {
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw=="
     },
     "mkdirp@3.0.1": {
       "integrity": "sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg=="
@@ -2349,7 +2430,7 @@
         "@rollup/plugin-terser",
         "@vercel/nft",
         "archiver",
-        "c12",
+        "c12@3.0.3_magicast@0.3.5",
         "chokidar",
         "citty",
         "compatx",
@@ -2479,7 +2560,7 @@
         "@oxc-parser/wasm",
         "@unhead/vue",
         "@vue/shared",
-        "c12",
+        "c12@3.0.3_magicast@0.3.5",
         "chokidar",
         "compatx",
         "consola",
@@ -2505,7 +2586,7 @@
         "mocked-exports",
         "nanotar",
         "nitropack",
-        "nypm",
+        "nypm@0.6.0",
         "ofetch",
         "ohash",
         "on-change",
@@ -2532,6 +2613,17 @@
         "vue-bundle-renderer",
         "vue-devtools-stub",
         "vue-router"
+      ]
+    },
+    "nypm@0.5.4": {
+      "integrity": "sha512-X0SNNrZiGU8/e/zAB7sCTtdxWTMSIO73q+xuKgglm2Yvzwlo8UoC5FNySQFCvl84uPaeADkqHUZUkWy4aH4xOA==",
+      "dependencies": [
+        "citty",
+        "consola",
+        "pathe@2.0.3",
+        "pkg-types@1.3.1",
+        "tinyexec@0.3.2",
+        "ufo"
       ]
     },
     "nypm@0.6.0": {
@@ -2638,7 +2730,7 @@
       "integrity": "sha512-Xa4Nw17FS9ApQFJ9umLiJS4orGjm7ZzwUrwamcGQuHSzDyth9boKDaycYdDcZDuqYATXw4HFXgaqWTctW/v1HA==",
       "dependencies": [
         "lru-cache@10.4.3",
-        "minipass"
+        "minipass@7.1.2"
       ]
     },
     "path-type@6.0.0": {
@@ -3287,14 +3379,25 @@
         "streamx"
       ]
     },
+    "tar@6.2.1": {
+      "integrity": "sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==",
+      "dependencies": [
+        "chownr@2.0.0",
+        "fs-minipass",
+        "minipass@5.0.0",
+        "minizlib@2.1.2",
+        "mkdirp@1.0.4",
+        "yallist@4.0.0"
+      ]
+    },
     "tar@7.4.3": {
       "integrity": "sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==",
       "dependencies": [
         "@isaacs/fs-minipass",
-        "chownr",
-        "minipass",
-        "minizlib",
-        "mkdirp",
+        "chownr@3.0.0",
+        "minipass@7.1.2",
+        "minizlib@3.0.2",
+        "mkdirp@3.0.1",
         "yallist@5.0.0"
       ]
     },
@@ -3677,6 +3780,9 @@
     "yallist@3.1.1": {
       "integrity": "sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g=="
     },
+    "yallist@4.0.0": {
+      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A=="
+    },
     "yallist@5.0.0": {
       "integrity": "sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw=="
     },
@@ -3726,7 +3832,10 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@bugsnag/cuid@^3.2.1",
         "npm:@nuxt/scripts@0.11.5",
+        "npm:kysely-ctl@~0.12.1",
+        "npm:kysely@~0.27.6",
         "npm:nuxt@^3.16.2",
         "npm:vue-router@^4.5.0",
         "npm:vue@^3.5.13"
